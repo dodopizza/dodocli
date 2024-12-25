@@ -29,16 +29,14 @@ New-Item -Path $destDir -ItemType Directory -Force | Out-Null
 Move-Item -Path $dodoExe -Destination $destDir
 
 # Add dodocli to PATH if not already present
-$profilePath = [Environment]::GetFolderPath("UserProfile")
-$userProfileScript = Join-Path -Path $profilePath -ChildPath "Documents\WindowsPowerShell\profile.ps1"
-$addToPath = "`$env:PATH += `";$env:USERPROFILE\dodocli`""
-
-if (!(Test-Path $userProfileScript -PathType Leaf) -or !(Select-String -Path $userProfileScript -Pattern "dodocli" -Quiet)) {
-    Add-Content -Path $userProfileScript -Value $addToPath
+$oldPath = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
+if ($oldPath -notcontains $destDir) {
+    $newPath = "$oldPath;$destDir"
+    [System.Environment]::SetEnvironmentVariable("Path", $newPath, [System.EnvironmentVariableTarget]::User)
 }
 
 # Setup config
-$configFile = Join-Path -Path $destDir -ChildPath ".dodocli"
+$configFile = Join-Path -Path $destDir -ChildPath "config.ini"
 $configContent = @"
 [default]
 tenantId = "585ca83d-87b8-4ca9-8a30-98085370c548"
