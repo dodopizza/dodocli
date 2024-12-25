@@ -36,7 +36,7 @@ if ($oldPath -notcontains $destDir) {
 }
 
 # Setup config
-$configFile = Join-Path -Path $destDir -ChildPath "config.ini"
+$configFile = Join-Path -Path $destDir -ChildPath ".dodocli"
 $configContent = @"
 [default]
 tenantId = "585ca83d-87b8-4ca9-8a30-98085370c548"
