@@ -1,1 +1,3 @@
 # dodocli
+
+Example test
