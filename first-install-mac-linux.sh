@@ -39,4 +39,12 @@ echo "Please open a new terminal session or source your $CONFIG_FILE file to use
 # Clean up
 rm -rf /tmp/first
 
+# setup config
+cat <<EOF >> "$HOME"/dodocli/.dodocli
+[default]
+tenantId = "585ca83d-87b8-4ca9-8a30-98085370c548"
+clientId = "8f27073c-3b4e-4700-a67c-a761778ef581"
+subscriptionId = "f5954335-be33-4b17-9f4f-e12d152f5ebe"
+EOF
+
 echo "Installation complete. Restart your terminal to start using dodo CLI"
