@@ -35,16 +35,6 @@ if ($oldPath -notcontains $destDir) {
     [System.Environment]::SetEnvironmentVariable("Path", $newPath, [System.EnvironmentVariableTarget]::User)
 }
 
-# Setup config
-$configFile = Join-Path -Path $destDir -ChildPath ".dodocli"
-$configContent = @"
-[default]
-tenantId = "585ca83d-87b8-4ca9-8a30-98085370c548"
-clientId = "8f27073c-3b4e-4700-a67c-a761778ef581"
-subscriptionId = "f5954335-be33-4b17-9f4f-e12d152f5ebe"
-"@
-$configContent | Out-File -FilePath $configFile
-
 # Clean up
 Remove-Item -Path $tempDir -Recurse -Force
 
