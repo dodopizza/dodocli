@@ -4,6 +4,11 @@
 os=$(uname -s | tr '[:upper:]' '[:lower:]')
 platform=$(uname -m)
 
+# Convert x86_64 to amd64
+if [[ "$platform" == "x86_64" ]]; then
+    platform="amd64"
+fi
+
 # Create temporary directory
 mkdir -p /tmp/first
 curl -sL "https://github.com/dodopizza/dodocli/releases/latest/download/dodo_${os}_${platform}.zip" -o /tmp/first/dodo.zip
