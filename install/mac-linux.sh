@@ -2,12 +2,7 @@
 
 # Get OS and platform
 os=$(uname -s | tr '[:upper:]' '[:lower:]')
-platform=$(uname -m)
-
-# Convert x86_64 to amd64
-if [[ "$platform" == "x86_64" ]]; then
-    platform="amd64"
-fi
+platform=$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
 
 # Create temporary directory
 mkdir -p /tmp/first
