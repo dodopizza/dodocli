@@ -9,11 +9,13 @@ platform=$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
 [ -z "$(command -v curl)" ] && echo 'curl must be installed' && exit 1
 
 # Check for supported platform
-if [ "$OS/$ARCH" != "darwin/amd64" ] && [ "$OS/$ARCH" != "darwin/arm64" ] && \
-   [ "$OS/$ARCH" != "linux/amd64" ] && [ "$OS/$ARCH" != "linux/arm64" ]; then
-  echo "Unsupported platform $OS/$ARCH. Supports darwin/amd64, darwin/arm64, linux/amd64, linux/arm64."
-  exit 1
-fi
+case "$os/$platform" in
+  darwin/amd64|darwin/arm64|linux/amd64|linux/arm64) ;;
+  *)
+    echo "Unsupported platform $os/$platform. Supports darwin/amd64, darwin/arm64, linux/amd64, linux/arm64."
+    exit 1
+    ;;
+esac
 
 # Create temporary directory
 mkdir -p /tmp/first
