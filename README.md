@@ -25,6 +25,7 @@ DodoCLI - это консольное приложение, предназнач
 ```bash
 iwr -useb https://dodopizza.github.io/dodocli/install/windows.ps1 | iex
 ```
+> В случае ошибки `Invoke-WebRequest : Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.` проверьте, что антивирус не блочит HTTP запросы
 
 #### Для Mac или Linux
 ```bash
