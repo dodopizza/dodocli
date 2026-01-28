@@ -10,8 +10,8 @@ DodoCLI - это консольное приложение, предназнач
 | `app` | Управление приложениями (Canary, Scale, Restart, Traffic, Secrets, Diagnose).  |       [README](docs/commands/app/app.md)       |
 | `cluster` | Управление локальным кластером (Kind) и ClusterSecrets.                        |   [README](docs/commands/cluster/cluster.md)   |
 | `workspace`| Управление стендом: VPN подключение, заморозка/разморозка, навигация.          | [README](docs/commands/workspace/workspace.md) |
-| `request` | Создание карточки запроса для дежурных инженеров (Duty Helper).                |     [README](internal/commands/request.md)     |
-| `init` | Инициализация утилиты, скачивание зависимостей и настройка контекстов.         |      [README](internal/commands/init.md)       |
+| `request` | Создание карточки запроса для дежурных инженеров (Duty Helper).                |     [README](docs/commands/request.md)     |
+| `init` | Инициализация утилиты, скачивание зависимостей и настройка контекстов.         |      [README](docs/commands/init.md)       |
 | `upgrade` | Обновление `dodocli` и зависимых инструментов до актуальной версии. |                       -                        |
 | `ui` | Запуск локальной платформы разработчика (IDP).                                 |                       -                        |
 | `kubectl` | Встроенный kubectl, для работы с k8s.                                          |                       -                        |
