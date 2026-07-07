@@ -35,8 +35,11 @@ if [[ "$SHELL" =~ "zsh" ]]; then
     CONFIG_FILE="$HOME/.zshrc"
 elif [[ "$SHELL" =~ "bash" ]]; then
     CONFIG_FILE="$HOME/.bashrc"
+elif [[ "$SHELL" =~ "fish" ]]; then
+    mkdir -p $HOME/.config/fish
+    CONFIG_FILE="$HOME/.config/fish/config.fish"
 else
-    echo "Unsupported shell. Only zsh and bash are supported."
+    echo "Unsupported shell. Only zsh, bash and fish are supported."
     exit 1
 fi
 
