@@ -13,11 +13,10 @@
 Поднимает локальный кластер, настраивает Ingress Nginx, применяет системные чарты и настраивает DNS.
 
   ```bash
-  dodo cluster local create -n kind
+  dodo cluster local create
   ```
 
 #### Параметры
-- `--name`, `-n`: Имя кластера (по умолчанию `kind`).
 - `--config`, `-c`: Путь к кастомному конфигу kind.
 - `--force`, `-f`: Сбросить кеш helm перед установкой системного чарта.
 - `--version`, `-v`: Версия чарта `infra-paas`.
@@ -27,7 +26,7 @@
 Удаляет локальный кластер и очищает контексты.
 
   ```bash
-  dodo cluster local delete -n kind
+  dodo cluster local delete
   ```
 
 ### Обновление токена

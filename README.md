@@ -9,6 +9,7 @@ DodoCLI - это консольное приложение, предназнач
 |---------|----------|:------------:|
 | `app` | Управление приложениями (Canary, Scale, Restart, Traffic, Secrets, Diagnose).  |       [README](docs/commands/app/app.md)       |
 | `cluster` | Управление локальным кластером (Kind) и ClusterSecrets.                        |   [README](docs/commands/cluster/cluster.md)   |
+| `db` | Временный доступ к базам данных MySQL (access, extend, revoke).                |      [README](docs/commands/db/db.md)      |
 | `workspace`| Управление стендом: VPN подключение, заморозка/разморозка, навигация.          | [README](docs/commands/workspace/workspace.md) |
 | `request` | Создание карточки запроса для дежурных инженеров (Duty Helper).                |     [README](docs/commands/request.md)     |
 | `init` | Инициализация утилиты, скачивание зависимостей и настройка контекстов.         |      [README](docs/commands/init.md)       |
