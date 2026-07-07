@@ -13,7 +13,6 @@ DodoCLI - это консольное приложение, предназнач
 | `workspace`| Управление стендом: VPN подключение, заморозка/разморозка, навигация.          | [README](docs/commands/workspace/workspace.md) |
 | `request` | Создание карточки запроса для дежурных инженеров (Duty Helper).                |     [README](docs/commands/request.md)     |
 | `init` | Инициализация утилиты, скачивание зависимостей и настройка контекстов.         |      [README](docs/commands/init.md)       |
-| `config` | Просмотр и изменение пользовательских настроек `dodocli` (auto-update и др.).  |      [README](docs/commands/config.md)      |
 | `upgrade` | Обновление `dodocli` и зависимых инструментов до актуальной версии. |                       -                        |
 | `ui` | Запуск локальной платформы разработчика (IDP).                                 |                       -                        |
 | `kubectl` | Встроенный kubectl, для работы с k8s.                                          |                       -                        |
