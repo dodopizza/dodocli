@@ -10,6 +10,7 @@
 | `details` | Просмотр зависимостей и ресурсов приложения (Lineage). | [README](details.md) |
 | `diagnose` | Диагностика подов (дампы памяти, трассировка) через Shovel. | [README](diagnose.md) |
 | `list` | Список приложений (DodoAppService) в кластере. | [README](list.md) |
+| `releases` | Список компонентов приложения (DodoAppService) с тегом образа и версией конфигов. Аналог `/yunga releases` | [README](releases.md) |
 | `restart` | Перезапуск (Rolling Restart) деплойментов. | [README](restart.md) |
 | `scale` | Управление количеством реплик (масштабирование). | [README](scale.md) |
 | `secret` | Управление секретами (просмотр, пересинхронизация). | [README](secret.md) |
